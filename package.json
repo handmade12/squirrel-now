@@ -1,0 +1,27 @@
+{
+  "name": "vadim-website",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "yarn build:hosting && yarn build:functions",
+    "build:hosting": "rm -rf dist && parcel build src/index.html",
+    "build:functions": "yarn --cwd functions build",
+    "deploy": "firebase deploy",
+    "emulator": "yarn emulator:kill && firebase emulators:start",
+    "emulator:kill": "lsof -t -i :5001 -i:5002 | xargs kill -9",
+    "postinstall": "yarn --cwd functions install --frozen-lockfile --non-interactive"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "2.7.0",
+    "@parcel/transformer-sass": "2.7.0",
+    "@parcel/transformer-webmanifest": "2.7.0",
+    "@tailwindcss/forms": "^0.5.3",
+    "firebase-tools": "^11.10.0",
+    "parcel": "^2.7.0",
+    "postcss": "^8.4.16",
+    "posthtml-include": "^1.7.4",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.8"
+  }
+}

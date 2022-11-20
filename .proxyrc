@@ -1,0 +1,14 @@
+{
+  "/api/subscribe-email": {
+    "target": "http://localhost:5001/defisitary-bdcab/us-central1/subscribeEmail",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/api": {
+    "target": "http://localhost:5001/defisitary-bdcab/us-central1",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

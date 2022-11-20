@@ -1,0 +1,63 @@
+{
+  "hosting": {
+    "public": "dist",
+    "predeploy": [
+      "yarn build:hosting"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/subscribe-email",
+        "function": "subscribeEmail"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/api{,/**}",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-store"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html|js|css|webp|jpg|jpeg|gif|png|svg|ico|eot|ttf|woff|woff2|txt)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          },
+          {
+            "key": "Content-Encoding",
+            "value": "br"
+          }
+        ]
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "functions": {
+    "source": "functions",
+    "predeploy": [
+      "yarn build:functions"
+    ],
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log"
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}
