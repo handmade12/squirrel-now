@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-squirrel-dark-blue {
+  background: #0e3759;
+}
+
+.text-squirrel-dark-blue {
+  color: #0e3759;
+}

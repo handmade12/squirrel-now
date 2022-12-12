@@ -1,5 +1,23 @@
-<div class="h-96 py-16 bg-cover border-t-2 flex flex-col">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6h-fu lg:px-8 ll"></div>
-  <h2 class="text-3xl font-bold text-black text-center">Contact Us</h2>
-  <p class="font-bold text-black text-center">to discuss how we can help your business!</p>
+<div class="h-96 py-16 bg-cover border-t-2 flex flex-col items-center">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8"></div>
+  <h2 class="text-5xl font-bold text-black text-center">Contact Us</h2>
+  <p class="text-3xl font-bold text-black text-center">to discuss how we can help your business!</p>
+  <div class="flex gap-3 mt-16 px-6" style="width: 500px">
+    <input
+      id="subscribe-email-input"
+      type="email"
+      name="email"
+      class="grow px-3 py-2 bg-white border shadow-sm rounded-3xl focus:ring-1"
+      placeholder="Enter your email"
+      style="width: 0; /*fixes bug with too wide screen on mobile*/"
+    />
+
+    <button
+      id="subscribe-email-button"
+      class="rounded-3xl border-red-800 bg-red-800 px-12 py-2 text-lg text-white shadow-lg hover:bg-red-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-offset-2"
+    >
+      <div class="w-6 h-6 loading"></div>
+      <span class="btn__text">Sign Up</span>
+    </button>
+  </div>
 </div>
