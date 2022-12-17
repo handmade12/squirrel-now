@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html,body {
+  font-family: 'Nunito', sans-serif;
+}
+
 .bg-squirrel-dark-blue {
   background: #0e3759;
 }
 
 .text-squirrel-dark-blue {
   color: #0e3759;
+}
+
+.title {
+  @apply text-4xl md:text-6xl text-center font-bold
 }
