@@ -17,3 +17,7 @@ html,body {
 .title {
   @apply text-4xl md:text-6xl text-center font-bold
 }
+
+.grecaptcha-badge {
+  display: none !important;
+}

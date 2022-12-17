@@ -11,9 +11,6 @@
     "logs": "firebase functions:log",
     "postinstall": "yarn build"
   },
-  "engines": {
-    "node": "16"
-  },
   "main": "lib/index.js",
   "dependencies": {
     "axios": "^0.27.2",

@@ -1,7 +1,7 @@
 import { onInit, addScript } from './_helpers';
 
 // Add Google Recaptcha v3
-const RECAPTCHA_PUBLIC_KEY = '6LffxHgiAAAAAIIEnl8fqftW3MjtcpsWmn87rwse';
+const RECAPTCHA_PUBLIC_KEY = '6LetnYgjAAAAAIUANvrzX23yxaaDKFRJ4qyOTk3w';
 addScript(`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_PUBLIC_KEY}`);
 
 // Subscribe form
@@ -44,6 +44,7 @@ function subscribeEmail(): void {
       }
     } catch (error) {
       console.error(error);
+      updateButtonLoadingState('error');
       displayErrorMessage(error.message);
     }
   });
