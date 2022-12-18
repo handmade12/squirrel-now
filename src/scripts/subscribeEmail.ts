@@ -37,6 +37,7 @@ function subscribeEmail(): void {
       const json = await response.json();
       if (response.status === 200) {
         updateButtonLoadingState('success');
+        displayErrorMessage("You're subscribed!");
       } else {
         updateButtonLoadingState('error');
         displayErrorMessage(json.message);
