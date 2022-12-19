@@ -27,3 +27,11 @@ function trackFormOpen() {
 }
 
 onInit(trackFormOpen);
+
+setTimeout(() => {
+  const address = 'sup' + 'po' + 'rt@sq' + 'uirr' + 'elnow.' + 'com';
+  document.querySelectorAll('[data-e2e=contact-link]').forEach(el => {
+    el.setAttribute('href', 'mai' + 'lto' + ':' + address);
+    el.innerHTML = address;
+  });
+}, 3000);
