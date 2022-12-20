@@ -1,69 +1,11 @@
 /* Loading state for a button */
 .loading {
-  border: 3px solid transparent;
-  border-top-color: white;
-  border-radius: 50%;
-  animation: loading 1s linear infinite;
-  font-family: monospace;
   display: none;
 }
 .loading--running > .loading,
-.loading.loading--running,
-.loading--success > .loading,
-.loading.loading--success,
-.loading--error > .loading,
-.loading.loading--error {
+.loading.loading--running {
   display: block;
 }
-.loading--success > .loading,
-.loading.loading--success,
-.loading--error > .loading,
-.loading.loading--error {
-  border-top-color: transparent;
-  animation: loading--result 1s;
-  transform: translateY(-10px);
-}
-.loading--success > .loading:before,
-.loading.loading--success:before {
-  content: '✔';
-  font-size: 200%;
-}
-.loading--error > .loading:before,
-.loading.loading--error:before {
-  content: 'x';
-  font-size: 200%;
-}
-@keyframes loading {
-  /* Safari support */
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-@keyframes loading--result {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1) translateY(-10px);
-  }
-}
-
-.btn {
-  position: relative;
-}
-.loading--running > .btn__text,
-.loading--success > .btn__text,
-.loading--error > .btn__text {
-  visibility: hidden;
-}
-.btn > .loading {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+.loading--running > .btn__text {
+  display: none;
 }
