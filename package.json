@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "yarn build:hosting && yarn build:functions",
-    "build:hosting": "rm -rf dist && parcel build src/index.html",
+    "build:hosting": "rm -rf dist .parcel-cache && parcel build src/index.html",
     "build:functions": "yarn --cwd functions build",
     "deploy": "firebase deploy",
     "emulator": "yarn emulator:kill && firebase emulators:start",
